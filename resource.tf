@@ -45,7 +45,7 @@ resource "null_resource" "laptop" {
     host        = aws_instance.kala.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("/home/ubuntu/.ssh/id_rsa.pem")
+    private_key = file("/home/ubuntu/.ssh/id_rsa")
 
   }
 
