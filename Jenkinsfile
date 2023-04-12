@@ -6,12 +6,12 @@ pipeline{
                 git url: 'https://github.com/Pallelavanya/terrform.git',
                 branch: 'main'
             }
-            stage('terraform init'){
-                steps{
-                    sh 'terraform init'
-                }
-                
+        }
+        stage('terraform init'){
+            steps{
+                sh 'terraform init'
             }
+            
         }
     }
-}
+ }
