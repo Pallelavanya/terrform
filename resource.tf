@@ -21,7 +21,7 @@ data "aws_security_group" "test" {
 
 resource "aws_key_pair" "deployer" {
   key_name   = "love"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9+mDlCNa8B11HHmEeOLVIl9uQ6zj4Fj2n89E+PoEbl6nRd9R7vuX0YvYGqFisK0xrGOTNR8SL6ELpO6U/MmtYEYbjcJ6dDBKqAXxRX4LQxID7fav+wa2SsqcGFqv/rdSATN8/5eSZzk9BgM5PTBf6RvVzWcoX9z7hh1M/KcAS8Fk31Pkh3wcP6/APUlgFy5rRuJq84/bRg6w/nAJn+k12SCKQbBqkNnAb+a1DPiOV8+U8dGIc7s9Ulc14nmcVzkL/K0/MIdXnKrjxYbP4bVFyAYbpuEa8gL0CXTR6Gvag/wNdCPrd76Tk6Om7WN0ODZxtCta5TuZ2RFWq8u8UT6gdEgRN8MOYuDj7HGVxSN9ih5X4i4qzLiOWMKy1aKQhEaLWDBkUAJzh1asBON/cehUQmR86EF89al4LBgu84pamZZshIRj1yA+ltTq2j4446zcg73wytN/H8Xe2c/D9wUaal2bUQTcTx/09Ky161XYVLJNkjwkKm1dk/4nMaPV/UiM= 91630@Lavanya"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCI8j/wMlxcCWfcGPJlDF1BwbJzaH5upaG9sSefWhKMeFtThzXBqM3Ia68Xzgd8DufIjiFWIYiqwQCoreEOIdeLpYeDsLGSEmRBgEaM3jKjEiCRcuJwQgPAQOQezliPFUTrpzAulpTfG63uY73Ibl34bZW3zd1xPf5tTABr3UENZu/1BvdvrJ4nR1g1xLXU75wsd+s/D7pXI0yxglzDZA6jJhK9u/AaRzSv8eo+lEMhmZcKHu7MQti8yBTb8PsH8eq1m2w+tnw1BW8bA9PgATJcPpOGbvoxhyNLtiDxlkYLPqNychIOWXOPQlSNMhmGiJk/wLRNidOuINPXk4+gVRydISCHTnVIB/z/5KKXN02ZyLE1vJWIAvvwE7ZigfuHC0JiLYaD/Z2A8GnJdnOIWuix5D44YPibeWxyziVUdPaJWm5cokrJvMN3t0XV45CpW1u5yDBjNxQCviCk2ILPBTRca0SclmJsliwYobqjiqbtxz1Pj31E57FNNKi1c2v8N48= ubuntu@ip-172-31-38-141"
 
 }
 
@@ -45,7 +45,7 @@ resource "null_resource" "laptop" {
     host        = aws_instance.kala.public_ip
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("C:/Users/91630/.ssh/id_rsa")
+    private_key = file("/home/ubuntu/.ssh/id_rsa")
 
   }
 
